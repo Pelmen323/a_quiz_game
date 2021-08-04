@@ -5,6 +5,10 @@ questions = {
     "Who, as the UK leader, signed the Munich agreements?:\nA. Chamberlen \nB. Churchill \nC. Daladier" : "A",
     "When the WWII started?:\nA. 1938 \nB. 1939 \nC. 1940": "B",
     "On what city was the second nuclear bomb dropped?:\nA. Tokyo \nB. Hiroshima \nC. Nagasaki": "C",
+    "Select the correct info and syntax of lists in python:\n A.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "A",
+    "Select the correct info and syntax of tuples in python:\n A.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "B",
+    "Select the correct info and syntax of sets in python:\n A.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "C",
+    "Select the correct info and syntax of dictionaries in python:\n A.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "D",
 }
 
 # Shuffle the dictionary
