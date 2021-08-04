@@ -2,7 +2,7 @@
 
 This is a simple quiz game project on Python.
 
-Written by myself as a studying practice.
+Written myself as a studying practice.
 Questions can be added into a 'questions' dictionary
 Current functionality:
 - Easy scalability - add as many questions as you want
