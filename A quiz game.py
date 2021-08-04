@@ -10,6 +10,9 @@ questions = {
     "Select the correct info and syntax of sets in python:\nA.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "C",
     "Select the correct info and syntax of dictionaries in python:\nA.[], changeable, ordered \nB. (), unchangeable, ordered \nC. {}, changeable, unordered \nD. {:}, changeable, ordered": "D",
 }
+num_of_questions = 0
+for v1 in questions.keys():
+    num_of_questions += 1
 
 # Shuffle the dictionary
 l = list(questions.items())     # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
@@ -45,7 +48,8 @@ while True:
         right_answers_list.append(value)                            # Saving correct answer
 
     # Printing the game stats
-    print("Thanks for the game! Your score is {}.". format(points)) # After all items from the dictionary are checked, the score is pronted
+    score_var = str(round(points/num_of_questions*100))                       # Calculate the % of the right answers
+    print("Thanks for the game! Your score is {}%. You've answered {} questions right". format(score_var, points)) # After all items from the dictionary are checked, the score is pronted
     print("Inputted answers: ", end=" ")
     print_answers(user_answers_list)
     print("Expected answers: ", end=" ")
@@ -55,6 +59,7 @@ while True:
     if replay_var == "y":
         print("Restarting the game")
         points = 0                                                  # Resetting the points value
+        total_answers = 0
         user_answers_list.clear()
         right_answers_list.clear()
     else:                                                           
