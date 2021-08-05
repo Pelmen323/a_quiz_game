@@ -80,7 +80,7 @@ while True:
         right_answers_list.append(value)                            # Saving correct answer
         var_quest_number = var_quest_number + 1
                                             # Printing the game stats
-    else:
+    else:           #The else part WILL be executed only if the for loop was NOT broken (see the 'END' part which breaks the loop)
         quitting(points, user_answers_list, right_answers_list)
                                          # Restart functionality
         replay_var = input("Do you want to play again? y/n: ").lower()  # Anything but Y/y will restart the game
@@ -90,8 +90,8 @@ while True:
             var_quest_number = 1
             user_answers_list.clear()
             right_answers_list.clear()
-            continue
+            continue                                                    # Restarting the 'while' loop
         else:                                                           
             break                                                       # Breaking the the inner loop
-    break
+    break                                                               # Breaking the outer loop, used only in 'End' functionality to exit the while loop
 print("Bye!")
