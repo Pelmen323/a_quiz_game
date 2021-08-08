@@ -30,7 +30,14 @@ questions = {       #w3schools - 25/25 questions from https://www.w3schools.com/
     "Which collection is unordered and doesn't allow duplicates?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET": "D",
     'Which collection consists of unique key:value pairs?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "A",
     'Which collection is unchangeable?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "C",
+    # Some other questions from the course:
+    'How to return a number of items in the container OR a length of string?: \nA. len() \nB. num() \nC. length() \nD. count()': "A",
+    'How to import an object from other file (Class, function etc.)?: \nA. import file_name, object_name \nB. import object_name \nC. from file_name import object_name \nD. import object_name from file_name': "C",
+    'How to import a file? ?: \nA. import file_name \nB. file_name.add \nC. from file_name import \nD. import.file_name ': "A",
+    'How to initialize a Class? ?: \nA. def init(): \nB. def __init__(): \nC. def(): \nD. class.init() ': "B",
+    'What the "Class" is ?: \nA. A type of loop \nB. A container with key-value pairs \nC. A "blueprint" to create objects \nD. Exception type ': "C",
 }
+
 
 # Shuffle the dictionary
 l = list(questions.items())     # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
@@ -57,7 +64,7 @@ def quitting(points, user_answers_list, right_answers_list):
 
 z = 1
 print("\n\nHello! This program is made by Vadim:) I hope you have a nice day!")
-print("Please answer the following questions by typing A, B or C. You can't return to the previous question, so choose wisely. Inputting 'End' will close the game")
+print("Please answer the following questions by typing A, B or C. You can't return to the previous question, so choose wisely. Inputting 'End' will close the game.")
 while True:
     for key, value in questions.items():                            # For each item in dictionary
         answer = input(str(var_quest_number) + ". " + key +"\nMy answer is:   ").upper()            # The question (key) is printed and the user has to input the answer
