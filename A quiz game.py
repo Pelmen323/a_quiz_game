@@ -1,7 +1,7 @@
 import random
 
-# Input your questions
-questions = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON
+# Dictionaries with questions
+python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON
     'What is a correct syntax to output "Hello World" in Python?: \nA. p("Hello World") \nB. print("Hello World") \nC. echo "Hello World" \nD. echo("Hello World");': "B",
     'How do you insert COMMENTS in Python code?: \nA. #This is a comment \nB. /*This is a comment*/ \nC. //This is a comment': "A",
     'Which one is NOT a legal variable name?: \nA. my_var \nB. Myvar \nC. _myvar \nD. my-var': "D",
@@ -30,30 +30,69 @@ questions = {       #w3schools - 25/25 questions from https://www.w3schools.com/
     "Which collection is unordered and doesn't allow duplicates?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET": "D",
     'Which collection consists of unique key:value pairs?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "A",
     'Which collection is unchangeable?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "C",
-    # Some other questions from the course:
+    # Some other questions from the Python course:
     'How to return a number of items in the container OR a length of string?: \nA. len() \nB. num() \nC. length() \nD. count()': "A",
     'How to import an object from other file (Class, function etc.)?: \nA. import file_name, object_name \nB. import object_name \nC. from file_name import object_name \nD. import object_name from file_name': "C",
     'How to import a file? ?: \nA. import file_name \nB. file_name.add \nC. from file_name import \nD. import.file_name ': "A",
     'How to initialize a Class? ?: \nA. def init(): \nB. def __init__(): \nC. def(): \nD. class.init() ': "B",
     'What the "Class" is ?: \nA. A type of loop \nB. A container with key-value pairs \nC. A "blueprint" to create objects \nD. Exception type ': "C",
+    'What is an instanced variable of the Class?: \nA. It is declared outside the class and is a default value for created objects \nB. It is declared inside the class and can be unique for each object \nC. It has a single value for each object and is declared inside the __init__ method ': "B",
+    'What a correct example of creating child class "Fish" (parent - Animals)?: \nA. class Fish(Animals): \nB. class Animals.Fish: \nC. class (Fish_Animals):': "A",
+    'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
+    'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
 }
 
+http_quiz = { 
+    #HTTP Training course https://www.linkedin.com/learning/http-essential-training
+    'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
+    'For what HTTP is used?: \nA. To store data:  \nB. To transfer web documents using TCP/IP  \nC. To transfer text on a local machine ': "B",
+    'What is true about HTTP and HTTPS: \nA. HTTP is no longer used  \nB. HTTPS is slower \nC. HTTPS uses encryption': "C",
+    'What is TCP (to transfer data between server and client): \nA. Transmission Control Protocol  \nB. Transmission Creation Protocol \nC. Transfer Control Protocol': "A",
+    'What is IP: \nA. Internet Paradigm \nB. Illustration Protocol \nC. Internet Protocol': "C",
+    'What is URL (universal resource locator): \nA. Non-human-read address of the resource on the Web \nB. Human-read address of the resource on the Web ': "B",
+    'What is DNS (Domain Name Server) used for: \nA. To store domain URLs and point them to the IPs of the servers \nB. To show human-read address in the browser and navigate to them ': "A",
+    'How the server and client communicate: \nA. Using requests only \nB. Using request-response-request combination \nC. Using request-response pairs': "C",
+    'What is header part of the HTTP request/response used for: \nA. To transfer metadata and methods \nB. To transfer metadata only \nC. To transfer body only': "A",
+    'HTTP request method GET: \nA. To get something \nB. To put something \nC. To add something \nD. To delete something': "A",
+    'HTTP request method PUT: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "B",
+    'HTTP request method UPDATE: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "C",
+    'HTTP request method DELETE: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "D",
+    'HTTP response code 200: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "A",
+    'HTTP response code 403: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "D",
+    'HTTP response code 404: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "B",
+    'HTTP response code 500: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "C",
+    'Mandatory parts of HTTP message : \nA. Method to define the action \nB. URL to point the requested resource \nC. Both': "C",
+}
 
-# Shuffle the dictionary
-l = list(questions.items())     # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
-random.shuffle(l)               # Shuffle the order of the list items
-questions = dict(l)             # Turn the list of tuples back into a dictionary
+# Choose the quiz
+def selecting_quiz():           
+    selected_dictionary = None
+    while True:
+        if selected_dictionary == "python":
+            questions = python_quiz
+            break
+        elif selected_dictionary == "http":
+            questions = http_quiz
+            break
+        else:
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP: ").lower()
+    return questions
 
-points = 0                      # Initialize the points var
-user_answers_list = []          # Initializing lists var to save input
-right_answers_list = []
-var_quest_number = 1
-                                            # Function to print the answers
+# Shuffle the questions order
+def shuffling():                
+    questions = selecting_quiz()
+    l = list(questions.items())     # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
+    random.shuffle(l)               # Shuffle the order of the list items
+    questions = dict(l)             # Turn the list of tuples back into a dictionary
+    return questions
+                                          
+# Print the answers
 def print_answers(list_var):    
     for i in list_var:
         print(i, end=" ")
     return print()
 
+# Print the results
 def quitting(points, user_answers_list, right_answers_list):
     score_var = str(round(points/(len(questions))*100))             # Calculate the % of the right answers. len() calculates num of objects in container
     print("Thanks for the game! Your score is {}%. You've answered {}/{} questions right". format(score_var, points, len(questions))) # After all items from the dictionary are checked, the score is pronted
@@ -62,10 +101,18 @@ def quitting(points, user_answers_list, right_answers_list):
     print("Expected answers: ", end=" ")
     print_answers(right_answers_list)
 
-z = 1
-print("\n\nHello! This program is made by Vadim:) I hope you have a nice day!")
-print("Please answer the following questions by typing A, B or C. You can't return to the previous question, so choose wisely. Inputting 'End' will close the game.")
+
+points = 0                      # Initialize the points var
+user_answers_list = []          # Initializing lists var to save input
+right_answers_list = []         
+var_quest_number = 1            # Questions number starts from 1
+
+print("\n\nHello! This program is made by Vadzim:) I hope you have a nice day!")
+print("Answer the following questions by typing A, B or C. \nYou can't return to the previous question, so choose wisely. \nInputting 'End' will close the game.")
+
 while True:
+    questions = shuffling()                                         # Start with selecting the dict and shuffling
+
     for key, value in questions.items():                            # For each item in dictionary
         answer = input(str(var_quest_number) + ". " + key +"\nMy answer is:   ").upper()            # The question (key) is printed and the user has to input the answer
 
