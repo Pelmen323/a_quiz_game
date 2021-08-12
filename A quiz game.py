@@ -40,6 +40,7 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     'What a correct example of creating child class "Fish" (parent - Animals)?: \nA. class Fish(Animals): \nB. class Animals.Fish: \nC. class (Fish_Animals):': "A",
     'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
     'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
+    'What is the difference between function and method?: \nA. They are the same in Python  \nB. Function is called by a name of associated object, method is just called on its name \nC. Method is called by a name of associated object, function is just called on its name': "C",
 }
 
 http_quiz = { 
@@ -52,18 +53,38 @@ http_quiz = {
     'What is URL (universal resource locator): \nA. Non-human-read address of the resource on the Web \nB. Human-read address of the resource on the Web ': "B",
     'What is DNS (Domain Name Server) used for: \nA. To store domain URLs and point them to the IPs of the servers \nB. To show human-read address in the browser and navigate to them ': "A",
     'How the server and client communicate: \nA. Using requests only \nB. Using request-response-request combination \nC. Using request-response pairs': "C",
-    'What is header part of the HTTP request/response used for: \nA. To transfer metadata and methods \nB. To transfer metadata only \nC. To transfer body only': "A",
-    'HTTP request method GET: \nA. To get something \nB. To put something \nC. To add something \nD. To delete something': "A",
-    'HTTP request method PUT: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "B",
-    'HTTP request method UPDATE: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "C",
-    'HTTP request method DELETE: \nA. To get something \nB. To put something \nC. To update something \nD. To delete something': "D",
-    'HTTP response code 200: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "A",
-    'HTTP response code 403: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "D",
-    'HTTP response code 404: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "B",
-    'HTTP response code 500: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "C",
+    'What is header part of the HTTP request/response used for: \nA. To transfer data about the request/response \nB. To transfer data that is needed to be POST/PUT or PATCH on the server \nC. To transfer methods only': "A",
+    'HTTP request method GET: \nA. To get something from the server \nB. To update existing resource with replacing all or some of its content \nC. To add something \nD. To create a new resource (example - submitting a form)': "A",
+    'Requirements for GET to work: \nA. URL and method \nB. URL, method, header with authorization info if not public and/or cookie \nC. ... \nD. ....': "A",
+    'HTTP request method POST: \nA. Always for creating a resource (even if it is a duplicate) \nB. For checking if resource exists then update, else create new resource \nC. Always to update a resource ': "A",
+    'HTTP request method PUT: \nA. Always for creating a resource (even if it is a duplicate) \nB. For checking if resource exists then update, else create new resource \nC. Always to update a resource ': "B",
+    'HTTP request method PATCH: \nA. Always for creating a resource (even if it is a duplicate) \nB. For checking if resource exists then update, else create new resource \nC. Always to update a resource ': "C",
+    'HTTP request method DELETE: \nA. To get something from the server \nB. To update existing resource with replacing all or some of its content \nC. To update something \nD. To delete something': "D",
+    'HTTP response code 200: \nA. OK \nB. Not found \nC. Resource created \nD. Access denied': "A",
+    'HTTP response code 201: \nA. OK \nB. Not found \nC. Internal server error \nD. Access denied': "A",
+    'HTTP response code 403: \nA. Method not allowed \nB. Not found \nC. Internal server error \nD. Access denied (Method is allowed)': "D",
+    'HTTP response code 404: \nA. Method not allowed \nB. Not found \nC. Internal server error \nD. Access denied (Method is allowed)': "B",
+    'HTTP response code 405: \nA. Method not allowed \nB. Not found \nC. Internal server error \nD. Access denied (Method is allowed)': "A",
+    'HTTP response code 500: \nA. Service unavailable \nB. Not found \nC. Internal server error \nD. Access denied': "C",
+    'HTTP response code 503: \nA. Service unavailable \nB. Not found \nC. Internal server error \nD. Access denied': "A",
     'Mandatory parts of HTTP message : \nA. Method to define the action \nB. URL to point the requested resource \nC. Both': "C",
+    'In "https://google.com/learning" how "https" and "google.com/learning" parts are called? : \nA. Protocol declaration and URL \nB. Protocol declaration and URN (Uniform resource name) \nC. Protocol declaration and URI (Uniform resource image)': "B",
+    'What host part of the URN (google.com) is used for? : \nA. It is a name which is registered for a certain DNS (domain name server), which points client to a certain IP \nB. It directly shows the IP of the resource to the client': "A",
+    'Correct example of URN resource path ? : \nA. https://google.com/learning.html \nB. google.com \nC. /index.html': "C",
+    'Correct example of chained URL query (part of URN, for example - stores user name or encoding etc) ? : \nA. u=12345&q=abcd \nB. ?u=12345&q=abcd \nC. ?u=12345?q=abcd': "B",
+    'How server can track the actions of user (example - automatic login when reloading the page)? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "C",
+    'How server can send some data to client to avoid redownloading the same element a lot of times? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "B",
 }
-
+rest_quiz = { 
+    'What is REST API?: \nA. Representation State Transfer Application Programming Interface': "A",
+    'REST API is a set of rules: \nA. To receive standard verbs (GET, POST, PUT etc) and return standardized data (resource -.xml or .json)': "A",
+    'Why is HTTP needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content' : "A",
+    'Why is REST API needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content' : "B",
+    'Why is database (SQL) needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data/creates a new entities/updates, deletes existing \nC. To store data/content' : "C",
+    'HTML part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "A",
+    'CSS part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "B",
+    'JavaScript part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "C",
+}
 # Choose the quiz
 def selecting_quiz():           
     selected_dictionary = None
@@ -74,8 +95,11 @@ def selecting_quiz():
         elif selected_dictionary == "http":
             questions = http_quiz
             break
+        elif selected_dictionary == "rest":
+            questions = rest_quiz
+            break
         else:
-            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP: ").lower()
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP, REST: ").lower()
     return questions
 
 # Shuffle the questions order
