@@ -6,7 +6,7 @@ Written myself as a studying practice. Contains - Python quiz (50 questions, que
 General idea - print the contents of the dictionary and check if user input == stored value
 
 Current functionality:
-- Easy scalability - add as many questions as you want into the dictionaries or create a new tests and integrate them!
+- Easy scalability - add as many questions as you want into the dictionaries or create new tests and integrate them!
 - Ability to select the test when starting the game
 - Basic foolproof - anything but allowed input will be rejected
 - Shuffling - questions are printed in random order
