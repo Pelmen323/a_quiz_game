@@ -56,7 +56,7 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
 }
 
 http_quiz = { 
-    #HTTP Training course https://www.linkedin.com/learning/http-essential-training
+    #HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
     'For what HTTP is used?: \nA. To store data:  \nB. To transfer web documents using TCP/IP  \nC. To transfer text on a local machine ': "B",
     'What is true about HTTP and HTTPS: \nA. HTTP is no longer used  \nB. HTTPS is slower \nC. HTTPS uses encryption': "C",
@@ -85,8 +85,6 @@ http_quiz = {
     'Correct example of chained URL query (for example - stores user name or encoding etc) ? : \nA. u=12345&q=abcd \nB. ?u=12345&q=abcd \nC. ?u=12345?q=abcd': "B",
     'How server can track the actions of user (example - automatic login when reloading the page)? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "C",
     'How server can send some data to client to avoid redownloading the same element a lot of times? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "B",
-}
-rest_quiz = { 
     'What is REST API?: \nA. Representation State Transfer Application Programming Interface': "A",
     'REST API is a set of rules: \nA. To receive standard verbs (GET, POST, PUT etc) and return standardized data (resource -.xml or .json)': "A",
     'Why is HTTP needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content' : "A",
@@ -106,11 +104,8 @@ def selecting_quiz():
         elif selected_dictionary == "http":
             questions = http_quiz
             break
-        elif selected_dictionary == "rest":
-            questions = rest_quiz
-            break
         else:
-            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP, REST: ").lower()
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP: ").lower()
     return questions
 
 # Shuffle the questions order
