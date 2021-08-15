@@ -1,14 +1,13 @@
 # A Quiz Game
 
-This is a simple quiz game project in Python.
+This is a quiz game project in Python.
 
-Written myself as a studying practice.
-Questions can be added into a 'questions' dictionary
+Written myself as a studying practice. Contains - Python quiz (50 questions, questions are constantly added), HTTP/REST quiz (35 questions)
+General idea - print the contents of the dictionary and check if user input == stored value
 
 Current functionality:
-- Easy scalability - add as many questions as you want into the dictionary 'questions'
-- Ability to select the test when starting the game:
-Currently contains Python test, based on W3Schools quiz, and HTTP test
+- Easy scalability - add as many questions as you want into the dictionaries or create a new tests and integrate them!
+- Ability to select the test when starting the game
 - Basic foolproof - anything but allowed input will be rejected
 - Shuffling - questions are printed in random order
 - Questions are numbered regardless of the shuffling
