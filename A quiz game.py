@@ -1,7 +1,7 @@
 import random
 
 # Dictionaries with questions
-python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON
+python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON, others created while progressing Python to keep myself in shape
     'What is a correct syntax to output "Hello World" in Python?: \nA. p("Hello World") \nB. print("Hello World") \nC. echo "Hello World" \nD. echo("Hello World");': "B",
     'How do you insert COMMENTS in Python code?: \nA. #This is a comment \nB. /*This is a comment*/ \nC. //This is a comment': "A",
     'Which one is NOT a legal variable name?: \nA. my_var \nB. Myvar \nC. _myvar \nD. my-var': "D",
@@ -41,9 +41,18 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
     'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
     'What is the difference between function and method?: \nA. They are the same in Python  \nB. Function is called by a name of associated object, method is just called on its name \nC. Method is called by a name of associated object, function is just called on its name': "C",
-    'What is the difference between usual and abstract class?: \nA. Abstract class doesnt inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - iherited \nC. It is a class without methods': "B",
+    'What is the difference between usual and abstract class?: \nA. Abstract class doesnt inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - inherited \nC. It is a class without methods': "B",
     'How to mark the method as abstract?: \nA. @abstractmethod  \nB. method_name.abstractmethod \nC. method_name(abstractmethod)': "A",
     'How to mark the class as abstract?: \nA. class Classname.abstract:  \nB. class Classname(abstract): \nC. class Classname(ABC):': "C",
+    'What is a correct example of walrus operator usage instead of \n" happy = True \nprint(happy)  ": \nA. print(happy = True)  \nB. print(happy := True) \nC. you cant assign a variable while using it': "B",
+    'Can the function be assigned to a variable?: \nA. only without input (i.e. var = print)  \nB. only with input (i.e. var = print("hello")) \nC. it cant \nD. It can be assigned regardless of passed arguments': "D",
+    'Choose a correct example of lambda usage?: \nA. function_name = lambda argument1,argument2 : argument1+argument2  \nB. function_name = lambda(argument1,argument2) : argument1+argument2 \nC. function_name = lambda : argument1+argument2': "A",
+    'Select the variant with the key, value, item of the dictionary Metallica:Battery : \nA. Battery, Metallica, Metallica:Battery  \nB. Metallica:Battery, Metallica, Battery \nC. Metallica, Battery, Metallica:Battery': "C",
+    'What is the difference between sort() and sorted(): \nA. sorted() works only for lists and returns None (it mutates the original list), while sort() works for everything but creates a new object \nB. sort() works only for lists and returns None (it mutates the original list), while sorted() works for everything but creates a new object \nC. sorted() doesnt work with lists , while sort() works for everything \nD. They are identical': "B",
+    'Select the correct variant of key to sort the list by the length of the strings: \nA. key = len  \nB. key = lambda x: len(x) \nC. key = x: len(x)': "B",
+    'Select the correct variant of key to sort the list of tuples by the 2nd item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[1]  \nB. key=[1] \nC. key= x[1]': "A",
+    'Select the correct variant of key to sort the list of tuples by the 3nd letter of 1st item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[2]  \nB. key=[2] \nC. key= lambda x: x[0][2]': "C",
+    'Select the correct variant of key to sort the list of tuples by the 2nd item and then by the 1st item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[2] and x[1]  \nB. key= lambda x: (x[1], x[0]) \nC. key= lambda x: x[1][0]': "B",
 }
 
 http_quiz = { 
@@ -53,7 +62,7 @@ http_quiz = {
     'What is true about HTTP and HTTPS: \nA. HTTP is no longer used  \nB. HTTPS is slower \nC. HTTPS uses encryption': "C",
     'What is TCP (to transfer data between server and client): \nA. Transmission Control Protocol  \nB. Transmission Creation Protocol \nC. Transfer Control Protocol': "A",
     'What is IP: \nA. Internet Paradigm \nB. Illustration Protocol \nC. Internet Protocol': "C",
-    'What is URL (universal resource locator): \nA. Non-human-read address of the resource on the Web \nB. Human-read address of the resource on the Web ': "B",
+    'What is URL (universal resource locator): \nA. Non-human-read address of the resource on the Web \nB. Human-read address of the resource on the Web with the method to access that resource': "B",
     'What is DNS (Domain Name Server) used for: \nA. To store domain URLs and point them to the IPs of the servers \nB. To show human-read address in the browser and navigate to them ': "A",
     'How the server and client communicate: \nA. Using requests only \nB. Using request-response-request combination \nC. Using request-response pairs': "C",
     'What is header part of the HTTP request/response used for: \nA. To transfer data about the request/response \nB. To transfer data that is needed to be POST/PUT or PATCH on the server \nC. To transfer methods only': "A",
@@ -70,10 +79,10 @@ http_quiz = {
     'HTTP response code 500: \nA. Service unavailable \nB. Not found \nC. Internal server error \nD. Access denied': "C",
     'HTTP response code 503: \nA. Service unavailable \nB. Not found \nC. Internal server error \nD. Access denied': "A",
     'Mandatory parts of HTTP message : \nA. Method to define the action \nB. URL to point the requested resource \nC. Both': "C",
-    'In "https://google.com/learning" how "https" and "google.com/learning" parts are called? : \nA. Protocol declaration and URL \nB. Protocol declaration and URN (Uniform resource name) \nC. Protocol declaration and URI (Uniform resource image)': "B",
-    'What host part of the URN (google.com) is used for? : \nA. It is a name which is registered for a certain DNS (domain name server), which points client to a certain IP \nB. It directly shows the IP of the resource to the client': "A",
-    'Correct example of URN resource path ? : \nA. https://google.com/learning.html \nB. google.com \nC. /index.html': "C",
-    'Correct example of chained URL query (part of URN, for example - stores user name or encoding etc) ? : \nA. u=12345&q=abcd \nB. ?u=12345&q=abcd \nC. ?u=12345?q=abcd': "B",
+    'In "https://google.com/learning/index.html" how "https" and "google.com/learning" parts are called? : \nA. Protocol declaration and URL \nB. Protocol declaration and URN (Uniform resource name) \nC. Protocol declaration and URI': "B",
+    'What host part of the URL (google.com) is used for? : \nA. It is a name which is registered for a certain DNS (domain name server), which points client to a certain IP \nB. It directly shows the IP of the resource to the client': "A",
+    'Correct example of URL resource path ? : \nA. https://google.com/learning.html \nB. google.com \nC. /index.html': "C",
+    'Correct example of chained URL query (for example - stores user name or encoding etc) ? : \nA. u=12345&q=abcd \nB. ?u=12345&q=abcd \nC. ?u=12345?q=abcd': "B",
     'How server can track the actions of user (example - automatic login when reloading the page)? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "C",
     'How server can send some data to client to avoid redownloading the same element a lot of times? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "B",
 }
@@ -133,8 +142,8 @@ user_answers_list = []          # Initializing lists var to save input
 right_answers_list = []         
 var_quest_number = 1            # Questions number starts from 1
 
-print("\n\nHello! This program is made by Vadzim:) I hope you have a nice day!")
-print("Answer the following questions by typing A, B or C. \nYou can't return to the previous question, so choose wisely. \nInputting 'End' will close the game.")
+print("\n\n###############################################\nHello! This program is made by Vadzim:) I hope you have a nice day!")
+print("- Answer the following questions by typing A, B, C or D. \n- You can't return to the previous question, so choose wisely. \n- Inputting 'End' will close the game.\n###############################################\n")
 
 while True:
     questions = shuffling()                                         # Start with selecting the dict and shuffling
@@ -165,7 +174,7 @@ while True:
                                          # Restart functionality
         replay_var = input("Do you want to play again? y/n: ").lower()  # Anything but Y/y will restart the game
         if replay_var == "y":
-            print("Restarting the game")
+            print("Restarting the game...\n")
             points = 0                                                  # Resetting the points value
             var_quest_number = 1
             user_answers_list.clear()
