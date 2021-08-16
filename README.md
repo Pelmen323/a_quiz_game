@@ -18,5 +18,6 @@ Current functionality:
 - Displaying the # of current questions
 - Displaying the % of correctly answered questions
 - Exit the game by typing "End"
+![Снимок экрана (541)](https://user-images.githubusercontent.com/43440389/129520901-a077d55b-bf49-4cfd-b75d-6bfb7ec4874d.png)
 
 Whoever reads this - have a nice day :)
