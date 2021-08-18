@@ -58,6 +58,8 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     'Correct example of filter() function usage to get the iterable from the list of tuples list_name = [("ABC", 10),("ABA", 22),("ABB", 36) ] with 2nd value of each tuple > 18: \nA. func_name = x:x[1] >= 18 \nlist(filter(func_name, list_name))  \nB. func_name = lambda x: x.1 >= 18 \nlist(filter(func_name, list_name)) \nC. func_name = lambda x: x[1] >= 18 \nlist(filter(func_name, list_name))': "C",
     'Correct example of reduce function usage to get the sum of all elements of the list = [1, 2, 3, 4, 5]: \nA. var = functools.reduce(x+y, list))  \nB. var = functools.reduce(lambda x, y: x+y, list) \nC. var.reduce(lambda x, y: x+y, list)': "B",
     'Correct example of list comprehension: \nA. list_squares = [i*i for i in range (1, 11)]  \nB. list_more_60 = [i for i in iterable_var if i>=60]  \nC. list_more_60_else_failed = [i if i>=60 else "Failed" for i in iterable_var] \nD. All mentioned variants are correct': "D",
+    'Correct return of 1. 5 % 2 and 2. 10 % 2: \nA. 2,5 ; 5  \nB. 250 ; 500 \nC. 0 ; 1 \nD. 1 ; 0': "D",
+    'How to backward a full string using [::]?: \nA. [1::1]  \nB. val[-1::] \nC. val[::-1] \nD. val[-1:-1:-1]': "C",
 }
 
 http_quiz = { 
