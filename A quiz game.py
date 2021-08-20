@@ -59,7 +59,11 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     'Correct example of reduce function usage to get the sum of all elements of the list = [1, 2, 3, 4, 5]: \nA. var = functools.reduce(x+y, list))  \nB. var = functools.reduce(lambda x, y: x+y, list) \nC. var.reduce(lambda x, y: x+y, list)': "B",
     'Correct example of list comprehension: \nA. list_squares = [i*i for i in range (1, 11)]  \nB. list_more_60 = [i for i in iterable_var if i>=60]  \nC. list_more_60_else_failed = [i if i>=60 else "Failed" for i in iterable_var] \nD. All mentioned variants are correct': "D",
     'Correct return of 1. 5 % 2 and 2. 10 % 2: \nA. 2,5 ; 5  \nB. 250 ; 500 \nC. 0 ; 1 \nD. 1 ; 0': "D",
-    'How to backward a full string using [::]?: \nA. [1::1]  \nB. val[-1::] \nC. val[::-1] \nD. val[-1:-1:-1]': "C",
+    'How to backward the whole string using [::]?: \nA. [1::1]  \nB. val[-1::] \nC. val[::-1] \nD. val[-1:-1:-1]': "C",
+    'What will var[-5:-2] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "B",
+    'What will var[-2:-5] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "A",
+    'How to find a difference between two dates in tuple format a = (1982, 4, 19), b = (1982, 4, 22) in as less code as possible?: \nA. abs(((datetime(a[0], a[1], a[2]))-(datetime(b[0], b[1], b[2])))) \nB. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2]))).days) \nC. abs(a-b) \nD. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2])))' : "B",
+    "What'return (','.join(phrases)).replace('right', 'left')' will return if phrases = ('bright aright right', 'ok')?: \nA. nothing  \nB. 'bleft aleft left,ok' \nC. 'bright, alright, right, ok' \nD. 'bleft, aleft, left, ok' ": "B",
 }
 
 http_quiz = { 
