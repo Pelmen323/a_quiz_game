@@ -1,7 +1,7 @@
 import random
 
 # Dictionaries with questions
-python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON, others created while progressing Python to keep myself in shape
+python1_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON, others created while progressing Python to keep myself in shape
     'What is a correct syntax to output "Hello World" in Python?: \nA. p("Hello World") \nB. print("Hello World") \nC. echo "Hello World" \nD. echo("Hello World");': "B",
     'How do you insert COMMENTS in Python code?: \nA. #This is a comment \nB. /*This is a comment*/ \nC. //This is a comment': "A",
     'Which one is NOT a legal variable name?: \nA. my_var \nB. Myvar \nC. _myvar \nD. my-var': "D",
@@ -30,6 +30,8 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     "Which collection is unordered and doesn't allow duplicates?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET": "D",
     'Which collection consists of unique key:value pairs?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "A",
     'Which collection is unchangeable?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "C",
+}
+python2_quiz = {
     # Some other questions from the Python course:
     'How to return a number of items in the container OR a length of string?: \nA. len() \nB. num() \nC. length() \nD. count()': "A",
     'How to import an object from other file (Class, function etc.)?: \nA. import file_name, object_name \nB. import object_name \nC. from file_name import object_name \nD. import object_name from file_name': "C",
@@ -62,20 +64,18 @@ python_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.co
     'How to backward the whole string using [::]?: \nA. [1::1]  \nB. val[-1::] \nC. val[::-1] \nD. val[-1:-1:-1]': "C",
     'What will var[-5:-2] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "B",
     'What will var[-2:-5] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "A",
-    'How to find a difference between two dates in tuple format a = (1982, 4, 19), b = (1982, 4, 22) in as less code as possible?: \nA. abs(((datetime(a[0], a[1], a[2]))-(datetime(b[0], b[1], b[2])))) \nB. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2]))).days) \nC. abs(a-b) \nD. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2])))' : "B",
+    'How to find a difference between two dates in tuple format a = (1982, 4, 19), b = (1982, 4, 22) (output should be an integer)?: \nA. abs(((datetime(a[0], a[1], a[2]))-(datetime(b[0], b[1], b[2])))) \nB. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2]))).days) \nC. abs(a-b) \nD. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2])))' : "B",
     "What'return (','.join(phrases)).replace('right', 'left')' will return if phrases = ('bright aright right', 'ok')?: \nA. nothing  \nB. 'bleft aleft left,ok' \nC. 'bright, alright, right, ok' \nD. 'bleft, aleft, left, ok' ": "B",
+    'What func is used to count the amount of matches in tuple or in string?: \nA. .len() \nB. .amount() \nC. .count() \nD. .findall': "C",
 }
 
 http_quiz = { 
     #HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
-    'For what HTTP is used?: \nA. To store data:  \nB. To transfer web documents using TCP/IP  \nC. To transfer text on a local machine ': "B",
     'What is true about HTTP and HTTPS: \nA. HTTP is no longer used  \nB. HTTPS is slower \nC. HTTPS uses encryption': "C",
     'What is TCP (to transfer data between server and client): \nA. Transmission Control Protocol  \nB. Transmission Creation Protocol \nC. Transfer Control Protocol': "A",
     'What is IP: \nA. Internet Paradigm \nB. Illustration Protocol \nC. Internet Protocol': "C",
-    'What is URL (universal resource locator): \nA. Non-human-read address of the resource on the Web \nB. Human-read address of the resource on the Web with the method to access that resource': "B",
     'What is DNS (Domain Name Server) used for: \nA. To store domain URLs and point them to the IPs of the servers \nB. To show human-read address in the browser and navigate to them ': "A",
-    'How the server and client communicate: \nA. Using requests only \nB. Using request-response-request combination \nC. Using request-response pairs': "C",
     'What is header part of the HTTP request/response used for: \nA. To transfer data about the request/response \nB. To transfer data that is needed to be POST/PUT or PATCH on the server \nC. To transfer methods only': "A",
     'HTTP request method GET: \nA. To get something from the server \nB. To update existing resource with replacing all or some of its content \nC. To add something \nD. To create a new resource (example - submitting a form)': "A",
     'HTTP request method POST: \nA. Always for creating a resource (even if it is a duplicate) \nB. For checking if resource exists then update, else create new resource \nC. Always to update a resource ': "A",
@@ -92,7 +92,6 @@ http_quiz = {
     'Mandatory parts of HTTP message : \nA. Method to define the action \nB. URL to point the requested resource \nC. Both': "C",
     'In "https://google.com/learning/index.html" how "https" and "google.com/learning" parts are called? : \nA. Protocol declaration and URL \nB. Protocol declaration and URN (Uniform resource name) \nC. Protocol declaration and URI': "B",
     'What host part of the URL (google.com) is used for? : \nA. It is a name which is registered for a certain DNS (domain name server), which points client to a certain IP \nB. It directly shows the IP of the resource to the client': "A",
-    'Correct example of URL resource path ? : \nA. https://google.com/learning.html \nB. google.com \nC. /index.html': "C",
     'Correct example of chained URL query (for example - stores user name or encoding etc) ? : \nA. u=12345&q=abcd \nB. ?u=12345&q=abcd \nC. ?u=12345?q=abcd': "B",
     'How server can track the actions of user (example - automatic login when reloading the page)? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "C",
     'How server can send some data to client to avoid redownloading the same element a lot of times? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "B",
@@ -105,18 +104,27 @@ http_quiz = {
     'CSS part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "B",
     'JavaScript part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "C",
 }
+
+regex_quiz= {
+}
 # Choose the quiz
 def selecting_quiz():           
     selected_dictionary = None
     while True:
-        if selected_dictionary == "python":
-            questions = python_quiz
+        if selected_dictionary == "python1":
+            questions = python1_quiz
+            break
+        elif selected_dictionary == "python2":
+            questions = python2_quiz
             break
         elif selected_dictionary == "http":
             questions = http_quiz
             break
+        elif selected_dictionary == "regex":
+            questions = regex_quiz
+            break
         else:
-            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python, HTTP: ").lower()
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (advanced level), HTTP, regex: ").lower()
     return questions
 
 # Shuffle the questions order
