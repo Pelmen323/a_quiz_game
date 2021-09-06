@@ -30,6 +30,8 @@ python1_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.c
     "Which collection is unordered and doesn't allow duplicates?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET": "D",
     'Which collection consists of unique key:value pairs?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "A",
     'Which collection is unchangeable?: \nA. DICTIONARY \nB. LIST \nC. TUPLE \nD. SET': "C",
+    'What is true about indexing "tree"[0:3]?: \nA. x and y are inclusive ("tree") \nB. y is inclusive, x is not ("ree") \nC. x is inclusive, y is not ("tre") \nD. both x and y are exclusive ("re")': "C",
+    'What is the difference between continue and pass?: \nA. pass starts the next iteration of for loop without executing the rest of the loop, continue does nothing \nB. they both start the next iteration of for loop \nC. pass finishes the for loop, continue starts the next iteration of the for loop \nD. continue starts the next iteration of for loop without executing the rest of the loop, pass does nothing': "D",
 }
 python2_quiz = {
     # Some other questions from the Python course:
@@ -111,21 +113,11 @@ regex_quiz= {
 def selecting_quiz():           
     selected_dictionary = None
     while True:
-        if selected_dictionary == "python1":
-            questions = python1_quiz
-            break
-        elif selected_dictionary == "python2":
-            questions = python2_quiz
-            break
-        elif selected_dictionary == "http":
-            questions = http_quiz
-            break
-        elif selected_dictionary == "regex":
-            questions = regex_quiz
-            break
-        else:
-            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (advanced level), HTTP, regex: ").lower()
-    return questions
+        if selected_dictionary == "python1": return python1_quiz
+        elif selected_dictionary == "python2": return python2_quiz
+        elif selected_dictionary == "http": return http_quiz
+        elif selected_dictionary == "regex": return regex_quiz
+        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (advanced level), HTTP, regex: ").lower()
 
 # Shuffle the questions order
 def shuffling():                
@@ -186,7 +178,7 @@ while True:
     else:           #The else part WILL be executed only if the for loop was NOT broken (see the 'END' part which breaks the loop)
         quitting(points, user_answers_list, right_answers_list)
                                          # Restart functionality
-        replay_var = input("Do you want to play again? y/n: ").lower()  # Anything but Y/y will restart the game
+        replay_var = input("Do you want to play again? y/n: ").lower()  # Only Y/y will restart the game
         if replay_var == "y":
             print("Restarting the game...\n")
             points = 0                                                  # Resetting the points value
