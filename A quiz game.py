@@ -70,7 +70,21 @@ python2_quiz = {
     "What'return (','.join(phrases)).replace('right', 'left')' will return if phrases = ('bright aright right', 'ok')?: \nA. nothing  \nB. 'bleft aleft left,ok' \nC. 'bright, alright, right, ok' \nD. 'bleft, aleft, left, ok' ": "B",
     'What func is used to count the amount of matches in tuple or in string?: \nA. .len() \nB. .amount() \nC. .count() \nD. .findall': "C",
 }
-
+python3_quiz = { #Random, OS
+    'How to generate a random integer?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "A",
+    'How to generate a random float from 0 to 1?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "B",
+    'How to randomly change the order of items in the iterable?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "C",
+    'How to select a random value from the iterable?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "D",
+    'How to select random values for several times?: \nA. Cant do that \nB. You have to rewrite the program each time \nC. use for loop, but only with random.choice (random.choice(iterable) for i in range(x)) \nD. Same as C, but for other functions too, like random.randint or random.random': "D",
+    'How to correctly write a path variable for OS module?: \nA. "C:\Users\VADIM\Desktop\-folder" \nB. "C:\\Users\\VADIM\\Desktop\\folder" \nC. "C:/Users/VADIM/Desktop/folder" \nD. "C:Users.VADIM.Desktop.folder"': "B",
+    'How to check if the path exists in system?: \nA. os.path.isfile \nB. os.path.isdir \nC. os.path.exists ': "C",
+    'How to create a file or overwrite the file?: \nA. with open(path, "w") as i: i.write(text) \nB. with open(path, "r") as i: i.write(text) \nC. with open(path, "a") as i: i.write(text) ': "A",
+    'How to create a file or add the text to the file?: \nA. with open(path, "w") as i: i.write(text) \nB. with open(path, "r") as i: i.read() \nC. with open(path, "a") as i: i.write(text) ': "C",
+    'How to print the contents of the file?: \nA. with open(path, "w") as i: i.write(text) \nB. with open(path, "r") as i: i.read() \nC. with open(path, "a") as i: i.write(text) ': "B",
+    'How make, move and delete a folder?: \nA. os.makedirs(), os.replace(path1, path2), os.removedirs() \nB. os.mkdir(), os.replace(path1, path2), os.rmdir() \nC. os.replace(path1, path2), os.removedirs(), os.makedirs()': "A",
+    'How to copy a file (without removing the original file)?: \nA. os.replace(path1, path2) \nB. shutil.copyfile(path1, path2) \nC. os.copy(path1, path2) ': "B",
+    'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
+}
 http_quiz = { 
     #HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
@@ -115,9 +129,10 @@ def selecting_quiz():
     while True:
         if selected_dictionary == "python1": return python1_quiz
         elif selected_dictionary == "python2": return python2_quiz
+        elif selected_dictionary == "python3": return python3_quiz
         elif selected_dictionary == "http": return http_quiz
         elif selected_dictionary == "regex": return regex_quiz
-        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (advanced level), HTTP, regex: ").lower()
+        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, regex: ").lower()
 
 # Shuffle the questions order
 def shuffling():                
