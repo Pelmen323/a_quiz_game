@@ -76,7 +76,6 @@ python3_quiz = { #Random, OS
     'How to randomly change the order of items in the iterable?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "C",
     'How to select a random value from the iterable?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "D",
     'How to select random values for several times?: \nA. Cant do that \nB. You have to rewrite the program each time \nC. use for loop, but only with random.choice (random.choice(iterable) for i in range(x)) \nD. Same as C, but for other functions too, like random.randint or random.random': "D",
-    'How to correctly write a path variable for OS module?: \nA. "C:\Users\VADIM\Desktop\-folder" \nB. "C:\\Users\\VADIM\\Desktop\\folder" \nC. "C:/Users/VADIM/Desktop/folder" \nD. "C:Users.VADIM.Desktop.folder"': "B",
     'How to check if the path exists in system?: \nA. os.path.isfile \nB. os.path.isdir \nC. os.path.exists ': "C",
     'How to create a file or overwrite the file?: \nA. with open(path, "w") as i: i.write(text) \nB. with open(path, "r") as i: i.write(text) \nC. with open(path, "a") as i: i.write(text) ': "A",
     'How to create a file or add the text to the file?: \nA. with open(path, "w") as i: i.write(text) \nB. with open(path, "r") as i: i.read() \nC. with open(path, "a") as i: i.write(text) ': "C",
@@ -121,7 +120,11 @@ http_quiz = {
     'JavaScript part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "C",
 }
 
-regex_quiz= {
+pytest= {
+    'What does "object.__new__.__defaults__ = (param1, param2 ...)" do?: \nA. Alters created object \nB. Deletes created object \nC. Sets default values for new objects ': "C",
+    'What does "_asdict" do (OOP - namedtuple object)?: \nA. Modifies initial tuple into dict \nB. Returns initial tuple contents in form of dict ': "B",
+    'What does "_replace" do (OOP - dict objects)?: \nA. Alters passed values of key=value pairs \nB. Same as .replace() ': "A",
+    'How to run pytest and get full info on fails: \nA. pytest \nB. pytest -v \nC. pytest -v (and all files should have function calls) \nD. pytest -all ': "B",
 }
 # Choose the quiz
 def selecting_quiz():           
@@ -131,8 +134,8 @@ def selecting_quiz():
         elif selected_dictionary == "python2": return python2_quiz
         elif selected_dictionary == "python3": return python3_quiz
         elif selected_dictionary == "http": return http_quiz
-        elif selected_dictionary == "regex": return regex_quiz
-        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, regex: ").lower()
+        elif selected_dictionary == "pytest": return pytest
+        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, pytest (basics of pytest): ").lower()
 
 # Shuffle the questions order
 def shuffling():                
