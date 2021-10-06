@@ -82,7 +82,11 @@ python3_quiz = {                                                                
     'How make, move and delete a folder?: \nA. os.makedirs(), os.replace(path1, path2), os.removedirs() \nB. os.mkdir(), os.replace(path1, path2), os.rmdir() \nC. os.replace(path1, path2), os.removedirs(), os.makedirs()': "A",
     'How to copy a file (without removing the original file)?: \nA. os.replace(path1, path2) \nB. shutil.copyfile(path1, path2) \nC. os.copy(path1, path2) ': "B",
     'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
-    'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
+    "Why do we need a tuple if we have lists?: \nA. They are needed since operations with them are faster than with lists \nB. I don't use tuples, they are obsolete \nC. They are entirely different since tuples store key:value pairs": "A",
+    "How to copy an iterable to modify the to copy without affecting the copied one?: \nA. Variants C, D and = (list2 = list1) \nB. You can't copy an iterable \nC. Only use .copy method (list2 = list1.copy()) \nD. variant C and indexing (list2 = list1[:]) or list func (list2 = list(list1)) ": "D",
+    'How to change or add an item to the dict?: \nA. dict_name.update(key:value) \nB. dict is immutable \nC. dict_name.update(key:value) or dict[key]=value': "C",
+    'What will be returned by dict_name.keys(), dict_name.values(), dict_name.items()?: \nA. 3 lists  \nB. 2 sets and 1 dict \nC. 1 dict and 2 lists \nD. 2 set-like objects and 1 dict-like object': "D",
+    'Set A - {1, 2, 3}, Set B - {1, 2, 3, 4, 5}. What will return a.issubset(b), b.issuperset(a), a.isdisjoint(b)?: \nA. True False False  \nB. True True False \nC. True True True \nD. False False False': "B",
 }
 http_quiz = {                                                                   # HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
