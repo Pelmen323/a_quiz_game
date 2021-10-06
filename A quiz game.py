@@ -1,7 +1,7 @@
 import random
 
 # Dictionaries with questions
-python1_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON, others created while progressing Python to keep myself in shape
+python1_quiz = {                                                                    # w3schools - 25/25 questions from https://www.w3schools.com/quiztest/quiztest.asp?qtest=PYTHON, others created while progressing Python to keep myself in shape
     'What is a correct syntax to output "Hello World" in Python?: \nA. p("Hello World") \nB. print("Hello World") \nC. echo "Hello World" \nD. echo("Hello World");': "B",
     'How do you insert COMMENTS in Python code?: \nA. #This is a comment \nB. /*This is a comment*/ \nC. //This is a comment': "A",
     'Which one is NOT a legal variable name?: \nA. my_var \nB. Myvar \nC. _myvar \nD. my-var': "D",
@@ -33,8 +33,7 @@ python1_quiz = {       #w3schools - 25/25 questions from https://www.w3schools.c
     'What is true about indexing "tree"[0:3]?: \nA. x and y are inclusive ("tree") \nB. y is inclusive, x is not ("ree") \nC. x is inclusive, y is not ("tre") \nD. both x and y are exclusive ("re")': "C",
     'What is the difference between continue and pass?: \nA. pass starts the next iteration of for loop without executing the rest of the loop, continue does nothing \nB. they both start the next iteration of for loop \nC. pass finishes the for loop, continue starts the next iteration of the for loop \nD. continue starts the next iteration of for loop without executing the rest of the loop, pass does nothing': "D",
 }
-python2_quiz = {
-    # Some other questions from the Python course:
+python2_quiz = {                                                                # Some other questions from the Python course (intermediate):
     'How to return a number of items in the container OR a length of string?: \nA. len() \nB. num() \nC. length() \nD. count()': "A",
     'How to import an object from other file (Class, function etc.)?: \nA. import file_name, object_name \nB. import object_name \nC. from file_name import object_name \nD. import object_name from file_name': "C",
     'How to import a file?: \nA. import file_name \nB. file_name.add \nC. from file_name import \nD. import.file_name ': "A",
@@ -45,20 +44,20 @@ python2_quiz = {
     'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
     'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
     'What is the difference between function and method?: \nA. They are the same in Python  \nB. Function is called by a name of associated object, method is just called on its name \nC. Method is called by a name of associated object, function is just called on its name': "C",
-    'What is the difference between usual and abstract class?: \nA. Abstract class doesnt inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - inherited \nC. It is a class without methods': "B",
+    "What is the difference between usual and abstract class?: \nA. Abstract class doesn't inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - inherited \nC. It is a class without methods": "B",
     'How to mark the method as abstract?: \nA. @abstractmethod  \nB. method_name.abstractmethod \nC. method_name(abstractmethod)': "A",
     'How to mark the class as abstract?: \nA. class Classname.abstract:  \nB. class Classname(abstract): \nC. class Classname(ABC):': "C",
     'What is a correct example of walrus operator usage instead of \n" happy = True \nprint(happy)  ": \nA. print(happy = True)  \nB. print(happy := True) \nC. you cant assign a variable while using it': "B",
     'Can the function be assigned to a variable?: \nA. only without input (i.e. var = print)  \nB. only with input (i.e. var = print("hello")) \nC. it cant \nD. It can be assigned regardless of passed arguments': "D",
     'Choose a correct example of lambda usage?: \nA. function_name = lambda argument1,argument2 : argument1+argument2  \nB. function_name = lambda(argument1,argument2) : argument1+argument2 \nC. function_name = lambda : argument1+argument2': "A",
     'Select the variant with the key, value, item of the dictionary Metallica:Battery : \nA. Battery, Metallica, Metallica:Battery  \nB. Metallica:Battery, Metallica, Battery \nC. Metallica, Battery, Metallica:Battery': "C",
-    'What is the difference between sort() and sorted(): \nA. sorted() works only for lists and returns None (it mutates the original list), while sort() works for everything but creates a new object \nB. sort() works only for lists and returns None (it mutates the original list), while sorted() works for everything but creates a new object \nC. sorted() doesnt work with lists , while sort() works for everything \nD. They are identical': "B",
+    "What is the difference between sort() and sorted(): \nA. sorted() works only for lists and returns None (it mutates the original list), while sort() works for everything but creates a new object \nB. sort() works only for lists and returns None (it mutates the original list), while sorted() works for everything but creates a new object \nC. sorted() doesn't work with lists , while sort() works for everything \nD. They are identical": "B",
     'Select the correct variant of key to sort the list by the length of the strings: \nA. key = len  \nB. key = lambda x: len(x) \nC. key = x: len(x)': "B",
     'Select the correct variant of key to sort the list of tuples by the 2nd item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[1]  \nB. key=[1] \nC. key= x[1]': "A",
     'Select the correct variant of key to sort the list of tuples by the 3rd letter of 1st item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[2]  \nB. key=[2] \nC. key= lambda x: x[0][2]': "C",
     'Select the correct variant of key to sort the list of tuples by the 2nd item and then by the 1st item of the tuples: list = [(name, A, 11),(name2, F, 2),(name3, A, 10)]: \nA. key= lambda x : x[2] and x[1]  \nB. key= lambda x: (x[1], x[0]) \nC. key= lambda x: x[1][0]': "B",
-    'Correct example of map function usage to multiply by 1.5 the 2nd element of a tuple in the list [("Jeans", 10), ("Jacket", 25)]?: \nA. funct_name = x:= (x[0], x[1]*1.5)  \nB. funct_name = lambda x: x[0], x[1]*1.5 \nC. funct_name = lambda x: (x[1], x[2]*1.5) \nD. funct_name = lambda x: (x[0], x[1]*1.5)': "D",
-    'Correct example of map function usage to capitalize the 1st element of a tuple in the list [("jeans", 10), ("jacket", 25)]?: \nA. funct_name = x:= x[0], x[1].capitalize()  \nB. funct_name = lambda x: (x[0].capitalize(), x[1]) \nC. funct_name = lambda x: (x[0], x[1].capitalize()) \nD. funct_name = lambda x: (x[0], x[1]).capitalize()': "B",
+    'Correct example of map function usage to multiply by 1.5 the 2nd element of a tuple in the list [("Jeans", 10), ("Jacket", 25)]?: \nA. func_name = x:= (x[0], x[1]*1.5)  \nB. func_name = lambda x: x[0], x[1]*1.5 \nC. func_name = lambda x: (x[1], x[2]*1.5) \nD. func_name = lambda x: (x[0], x[1]*1.5)': "D",
+    'Correct example of map function usage to capitalize the 1st element of a tuple in the list [("jeans", 10), ("jacket", 25)]?: \nA. func_name = x:= x[0], x[1].capitalize()  \nB. func_name = lambda x: (x[0].capitalize(), x[1]) \nC. func_name = lambda x: (x[0], x[1].capitalize()) \nD. func_name = lambda x: (x[0], x[1]).capitalize()': "B",
     'Correct example of filter() function usage to get the iterable from the list of tuples list_name = [("ABC", 10),("ABA", 22),("ABB", 36) ] with 2nd value of each tuple > 18: \nA. func_name = x:x[1] >= 18 \nlist(filter(func_name, list_name))  \nB. func_name = lambda x: x.1 >= 18 \nlist(filter(func_name, list_name)) \nC. func_name = lambda x: x[1] >= 18 \nlist(filter(func_name, list_name))': "C",
     'Correct example of reduce function usage to get the sum of all elements of the list = [1, 2, 3, 4, 5]: \nA. var = functools.reduce(x+y, list))  \nB. var = functools.reduce(lambda x, y: x+y, list) \nC. var.reduce(lambda x, y: x+y, list)': "B",
     'Correct example of list comprehension: \nA. list_squares = [i*i for i in range (1, 11)]  \nB. list_more_60 = [i for i in iterable_var if i>=60]  \nC. list_more_60_else_failed = [i if i>=60 else "Failed" for i in iterable_var] \nD. All mentioned variants are correct': "D",
@@ -70,7 +69,7 @@ python2_quiz = {
     "What'return (','.join(phrases)).replace('right', 'left')' will return if phrases = ('bright aright right', 'ok')?: \nA. nothing  \nB. 'bleft aleft left,ok' \nC. 'bright, alright, right, ok' \nD. 'bleft, aleft, left, ok' ": "B",
     'What func is used to count the amount of matches in tuple or in string?: \nA. .len() \nB. .amount() \nC. .count() \nD. .findall': "C",
 }
-python3_quiz = { #Random, OS
+python3_quiz = {                                                                # Random, OS, advanced stuff
     'How to generate a random integer?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "A",
     'How to generate a random float from 0 to 1?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "B",
     'How to randomly change the order of items in the iterable?: \nA. random.randint(x, y) \nB. random.random() \nC. random.shuffle \nD. random.choice': "C",
@@ -83,9 +82,9 @@ python3_quiz = { #Random, OS
     'How make, move and delete a folder?: \nA. os.makedirs(), os.replace(path1, path2), os.removedirs() \nB. os.mkdir(), os.replace(path1, path2), os.rmdir() \nC. os.replace(path1, path2), os.removedirs(), os.makedirs()': "A",
     'How to copy a file (without removing the original file)?: \nA. os.replace(path1, path2) \nB. shutil.copyfile(path1, path2) \nC. os.copy(path1, path2) ': "B",
     'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
+    'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
 }
-http_quiz = { 
-    #HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
+http_quiz = {                                                                   # HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
     'What is true about HTTP and HTTPS: \nA. HTTP is no longer used  \nB. HTTPS is slower \nC. HTTPS uses encryption': "C",
     'What is TCP (to transfer data between server and client): \nA. Transmission Control Protocol  \nB. Transmission Creation Protocol \nC. Transfer Control Protocol': "A",
@@ -119,92 +118,90 @@ http_quiz = {
     'CSS part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "B",
     'JavaScript part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "C",
 }
-
-pytest= {
+pytest = {
     'What does "object.__new__.__defaults__ = (param1, param2 ...)" do?: \nA. Alters created object \nB. Deletes created object \nC. Sets default values for new objects ': "C",
     'What does "_asdict" do (OOP - namedtuple object)?: \nA. Modifies initial tuple into dict \nB. Returns initial tuple contents in form of dict ': "B",
     'What does "_replace" do (OOP - dict objects)?: \nA. Alters passed values of key=value pairs \nB. Same as .replace() ': "A",
     'How to run pytest and get full info on fails: \nA. pytest \nB. pytest -v \nC. pytest -v (and all files should have function calls) \nD. pytest -all ': "B",
+    'How to name files for pytest to recognize?: \nA. test_ \nB. _test \nC. _test_ \nD. test_ or _test or directly pass the name file': "D",
 }
-# Choose the quiz
-def selecting_quiz():           
+
+
+def selecting_quiz():
     selected_dictionary = None
     while True:
-        if selected_dictionary == "python1": return python1_quiz
-        elif selected_dictionary == "python2": return python2_quiz
-        elif selected_dictionary == "python3": return python3_quiz
-        elif selected_dictionary == "http": return http_quiz
-        elif selected_dictionary == "pytest": return pytest
-        else: selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, pytest (basics of pytest): ").lower()
+        if selected_dictionary == "python1":
+            return python1_quiz
+        elif selected_dictionary == "python2":
+            return python2_quiz
+        elif selected_dictionary == "python3":
+            return python3_quiz
+        elif selected_dictionary == "http":
+            return http_quiz
+        elif selected_dictionary == "pytest":
+            return pytest
+        else:
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, pytest (basics of pytest): ").lower()
 
-# Shuffle the questions order
-def shuffling():                
+
+def shuffle_questions():                                                             # Shuffle the questions order
     questions = selecting_quiz()
-    l = list(questions.items())     # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
-    random.shuffle(l)               # Shuffle the order of the list items
-    questions = dict(l)             # Turn the list of tuples back into a dictionary
+    list_q = list(questions.items())                                                 # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
+    random.shuffle(list_q)                                                           # Shuffle the order of the list items
+    questions = dict(list_q)                                                         # Turn the list of tuples back into a dictionary
     return questions
-                                          
-# Print the answers
-def print_answers(list_var):    
+
+
+def print_answers(list_var):
     for i in list_var:
         print(i, end=" ")
     return print()
 
-# Print the results
-def quitting(points, user_answers_list, right_answers_list):
-    score_var = str(round(points/(len(questions))*100))             # Calculate the % of the right answers. len() calculates num of objects in container
-    print("Thanks for the game! Your score is {}%. You've answered {}/{} questions right". format(score_var, points, len(questions))) # After all items from the dictionary are checked, the score is pronted
+
+def print_score(points, user_answers_list, right_answers_list):
+    score_var = str(round(points/(len(questions))*100))                             # Calculate the % of the right answers. len() calculates num of objects in container
+    print(f"Thanks for the game! Your score is {score_var}%. You've answered {points}/{len(questions)} questions right")  # After all items from the dictionary are checked, the score is pronted
     print("Inputted answers: ", end=" ")
     print_answers(user_answers_list)
     print("Expected answers: ", end=" ")
     print_answers(right_answers_list)
 
 
-points = 0                      # Initialize the points var
-user_answers_list = []          # Initializing lists var to save input
-right_answers_list = []         
-var_quest_number = 1            # Questions number starts from 1
-
 print("\n\n###############################################\nHello! This program is made by Vadzim:) I hope you have a nice day!")
 print("- Answer the following questions by typing A, B, C or D. \n- You can't return to the previous question, so choose wisely. \n- Inputting 'End' will close the game.\n###############################################\n")
 
 while True:
-    questions = shuffling()                                         # Start with selecting the dict and shuffling
+    points = 0
+    user_answers_list = []                                              # Initializing lists var to save input
+    right_answers_list = []
+    question_number = 1                                                 # Questions number starts from 1
+    questions = shuffle_questions()                                     # Start with selecting the dict and shuffling
 
-    for key, value in questions.items():                            # For each item in dictionary
-        answer = input(str(var_quest_number) + ". " + key +"\nMy answer is:   ").upper()            # The question (key) is printed and the user has to input the answer
+    for key, value in questions.items():
+        answer = input(f"{question_number}. {key} \nMy answer is: ").upper()   # The question (key) is printed and the user has to input the answer
 
-        if answer == 'END':
-            quitting(points, user_answers_list, right_answers_list)
-            break                                                   # Breaking the the inner loop
-
-        while answer not in questions.values():                     # If the answer is not defined in dictionary values - the loop will ask for a viable answer
+        while answer not in questions.values():                         # If the answer is not defined in dictionary values - the loop will ask for a viable answer
             answer = input("Wrong input, try again: ").upper()
 
-        if answer == value:                                         # Right answer
-            print("Right answer!")
-            print("------------------------------")
-            points = points + 1                                     # +1 to the score
-        elif answer != value:                                       # Wrong answer answer   
-            print("Wrong answer!")
-            print("------------------------------")
-        user_answers_list.append(answer)                            # Saving inputted answer
-        right_answers_list.append(value)                            # Saving correct answer
-        var_quest_number = var_quest_number + 1
-                                            # Printing the game stats
-    else:           #The else part WILL be executed only if the for loop was NOT broken (see the 'END' part which breaks the loop)
-        quitting(points, user_answers_list, right_answers_list)
-                                         # Restart functionality
+        if answer == 'END':
+            print_score(points, user_answers_list, right_answers_list)
+            break                                                       # Breaking the the inner loop
+        elif answer == value:                                           # Right answer
+            print("Right answer!\n------------------------------")
+            points += 1
+        elif answer != value:                                           # Wrong answer
+            print("Wrong answer!\n------------------------------")
+        user_answers_list.append(answer)                                # Saving inputted answer
+        right_answers_list.append(value)                                # Saving correct answer
+        question_number += 1
+
+    else:                                                               # The else part WILL be executed only if the for loop was NOT broken (see the 'END' part which breaks the loop)
+        print_score(points, user_answers_list, right_answers_list)
         replay_var = input("Do you want to play again? y/n: ").lower()  # Only Y/y will restart the game
         if replay_var == "y":
             print("Restarting the game...\n")
-            points = 0                                                  # Resetting the points value
-            var_quest_number = 1
-            user_answers_list.clear()
-            right_answers_list.clear()
-            continue                                                    # Restarting the 'while' loop
-        else:                                                           
-            break                                                       # Breaking the the inner loop
+            continue                                                    # Restarting the game
+        else:
+            break                                                       # Breaking the the inner loop, exit the game from the restarting part
     break                                                               # Breaking the outer loop, used only in 'End' functionality to exit the while loop
 print("Bye!")
