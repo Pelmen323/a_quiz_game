@@ -37,16 +37,6 @@ python2_quiz = {                                                                
     'How to return a number of items in the container OR a length of string?: \nA. len() \nB. num() \nC. length() \nD. count()': "A",
     'How to import an object from other file (Class, function etc.)?: \nA. import file_name, object_name \nB. import object_name \nC. from file_name import object_name \nD. import object_name from file_name': "C",
     'How to import a file?: \nA. import file_name \nB. file_name.add \nC. from file_name import \nD. import.file_name ': "A",
-    'How to initialize a Class?: \nA. def init(): \nB. def __init__(): \nC. def(): \nD. class.init() ': "B",
-    'What the "Class" is ?: \nA. A type of loop \nB. A container with key-value pairs \nC. A "blueprint" to create objects \nD. Exception type ': "C",
-    'What is an instanced variable of the Class?: \nA. It is declared outside the class and has only one value for all created objects \nB. It is declared inside the class and can be unique for each object \nC. It has a common value for each object and is declared inside the __init__ method ': "B",
-    'What a correct example of creating child class "Fish" (parent - Animals)?: \nA. class Fish(Animals): \nB. class Animals.Fish: \nC. class (Fish_Animals):': "A",
-    'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
-    'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
-    'What is the difference between function and method?: \nA. They are the same in Python  \nB. Function is called by a name of associated object, method is just called on its name \nC. Method is called by a name of associated object, function is just called on its name': "C",
-    "What is the difference between usual and abstract class?: \nA. Abstract class doesn't inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - inherited \nC. It is a class without methods": "B",
-    'How to mark the method as abstract?: \nA. @abstractmethod  \nB. method_name.abstractmethod \nC. method_name(abstractmethod)': "A",
-    'How to mark the class as abstract?: \nA. class Classname.abstract:  \nB. class Classname(abstract): \nC. class Classname(ABC):': "C",
     'What is a correct example of walrus operator usage instead of \n" happy = True \nprint(happy)  ": \nA. print(happy = True)  \nB. print(happy := True) \nC. you cant assign a variable while using it': "B",
     'Can the function be assigned to a variable?: \nA. only without input (i.e. var = print)  \nB. only with input (i.e. var = print("hello")) \nC. it cant \nD. It can be assigned regardless of passed arguments': "D",
     'Choose a correct example of lambda usage?: \nA. function_name = lambda argument1,argument2 : argument1+argument2  \nB. function_name = lambda(argument1,argument2) : argument1+argument2 \nC. function_name = lambda : argument1+argument2': "A",
@@ -65,7 +55,7 @@ python2_quiz = {                                                                
     'How to backward the whole string using [::]?: \nA. [1::1]  \nB. val[-1::] \nC. val[::-1] \nD. val[-1:-1:-1]': "C",
     'What will var[-5:-2] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "B",
     'What will var[-2:-5] return if var = "chicken"?: \nA. nothing  \nB. "ick" \nC. "icke" \nD. "ekci"': "A",
-    'How to find a difference between two dates in tuple format a = (1982, 4, 19), b = (1982, 4, 22) (output should be an integer)?: \nA. abs(((datetime(a[0], a[1], a[2]))-(datetime(b[0], b[1], b[2])))) \nB. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2]))).days) \nC. abs(a-b) \nD. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2])))' : "B",
+    'How to find a difference between two dates in tuple format a = (1982, 4, 19), b = (1982, 4, 22) (output should be an integer)?: \nA. abs(((datetime(a[0], a[1], a[2]))-(datetime(b[0], b[1], b[2])))) \nB. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2]))).days) \nC. abs(a-b) \nD. abs(((datetime.date(a[0], a[1], a[2]))-(datetime.date(b[0], b[1], b[2])))': "B",
     "What'return (','.join(phrases)).replace('right', 'left')' will return if phrases = ('bright aright right', 'ok')?: \nA. nothing  \nB. 'bleft aleft left,ok' \nC. 'bright, alright, right, ok' \nD. 'bleft, aleft, left, ok' ": "B",
     'What func is used to count the amount of matches in tuple or in string?: \nA. .len() \nB. .amount() \nC. .count() \nD. .findall': "C",
 }
@@ -83,10 +73,11 @@ python3_quiz = {                                                                
     'How to copy a file (without removing the original file)?: \nA. os.replace(path1, path2) \nB. shutil.copyfile(path1, path2) \nC. os.copy(path1, path2) ': "B",
     'How to delete a file?: \nA. os.delete \nB. os.remove ': "B",
     "Why do we need a tuple if we have lists?: \nA. They are needed since operations with them are faster than with lists \nB. I don't use tuples, they are obsolete \nC. They are entirely different since tuples store key:value pairs": "A",
-    "How to copy an iterable to modify the to copy without affecting the copied one?: \nA. Variants C, D and = (list2 = list1) \nB. You can't copy an iterable \nC. Only use .copy method (list2 = list1.copy()) \nD. variant C and indexing (list2 = list1[:]) or list func (list2 = list(list1)) ": "D",
+    "How to copy an iterable to modify the copy without affecting the copied one?: \nA. Variants C, D and = (list2 = list1) \nB. You can't copy an iterable \nC. Only use .copy method (list2 = list1.copy()) \nD. variant C and indexing (list2 = list1[:]) or list func (list2 = list(list1)) ": "D",
     'How to change or add an item to the dict?: \nA. dict_name.update(key:value) \nB. dict is immutable \nC. dict_name.update(key:value) or dict[key]=value': "C",
     'What will be returned by dict_name.keys(), dict_name.values(), dict_name.items()?: \nA. 3 lists  \nB. 2 sets and 1 dict \nC. 1 dict and 2 lists \nD. 2 set-like objects and 1 dict-like object': "D",
     'Set A - {1, 2, 3}, Set B - {1, 2, 3, 4, 5}. What will return a.issubset(b), b.issuperset(a), a.isdisjoint(b)?: \nA. True False False  \nB. True True False \nC. True True True \nD. False False False': "B",
+    'How raise AssertionError if x is less than zero?: \nA. AssertionError if x < 0 \nB. assert(x < 0) \nC. if x <= 0: raise AssertionError \nD. assert(raise Exception if x < 0) ': "B",
 }
 http_quiz = {                                                                   # HTTP Training course https://www.linkedin.com/learning/http-essential-training plus some other questions (WIP)
     'What is HTTP?: \nA. Hyper Text Transfer Protocol:  \nB. Hyper Text Typing Protocol \nC. High Text Tooltip Protocol': "A",
@@ -115,9 +106,9 @@ http_quiz = {                                                                   
     'How server can send some data to client to avoid redownloading the same element a lot of times? : \nA. Using requests/responses \nB. Using caching \nC. Using cookies': "B",
     'What is REST API?: \nA. Representation State Transfer Application Programming Interface': "A",
     'REST API is a set of rules: \nA. To receive standard verbs (GET, POST, PUT etc) and return standardized data (resource -.xml or .json)': "A",
-    'Why is HTTP needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content' : "A",
-    'Why is REST API needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content' : "B",
-    'Why is database (SQL) needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data/creates a new entities/updates, deletes existing \nC. To store data/content' : "C",
+    'Why is HTTP needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content': "A",
+    'Why is REST API needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data \nC. To store data/content': "B",
+    'Why is database (SQL) needed?: \nA. To send a request to the server and receive a response in readable for client format \nB. To process the request and send back the requested data/creates a new entities/updates, deletes existing \nC. To store data/content': "C",
     'HTML part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "A",
     'CSS part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "B",
     'JavaScript part of the webpage is?: \nA. Content on the webpage \nB. Layout of the content on the webpage \nC. Manipulations with document/styes': "C",
@@ -128,6 +119,22 @@ pytest = {
     'What does "_replace" do (OOP - dict objects)?: \nA. Alters passed values of key=value pairs \nB. Same as .replace() ': "A",
     'How to run pytest and get full info on fails: \nA. pytest \nB. pytest -v \nC. pytest -v (and all files should have function calls) \nD. pytest -all ': "B",
     'How to name files for pytest to recognize?: \nA. test_ \nB. _test \nC. _test_ \nD. test_ or _test or directly pass the name file': "D",
+}
+oop = {
+    'What the "Class" is ?: \nA. A type of loop \nB. A container with key-value pairs \nC. A "blueprint" to create objects \nD. Exception type ': "C",
+    'How to initialize a Class object?: \nA. def init(): \nB. def __init__(): \nC. def(): \nD. class.init() ': "B",
+    'What is the difference between function and method?: \nA. They are the same in Python  \nB. Function is called by a name of associated object, method is just called on its name \nC. Method is called by a name of associated object, function is just called on its name': "C",
+    'What is an instanced variable of the Class?: \nA. It is declared outside the class and has only one value for all created objects \nB. It is declared inside the class and can be unique for each object \nC. It has a common value for each object and is declared inside the __init__ method ': "B",
+    'What a correct example of creating child class "Fish" (parent - Animals)?: \nA. class Fish(Animals): \nB. class Animals.Fish: \nC. class (Fish_Animals):': "A",
+    'How to create an object "fish_1" of the class "Fish" (parent - Animals)?: \nA. fish_1 is Fish:  \nB. fish_1 = Fish(Animals): \nC. fish_1 = Fish(): \nD. fish_1 = Animals.Fish:': "C",
+    'Class "Organism" has attribute "alive = True", its child class Animal has the method "running". What will inherit the child class of the Animal ?: \nA. only "running" \nB. "running" and "alive" \nC. nothing \nD. only "alive"': "B",
+    "What is the difference between usual and abstract class?: \nA. Abstract class doesn't inherit anything  \nB. Objects of abstract class cant be created, as well as attributes/methods - inherited \nC. It is a class without methods": "B",
+    'How to mark the method as abstract?: \nA. @abstractmethod  \nB. method_name.abstractmethod \nC. method_name(abstractmethod)': "A",
+    'How to mark the class as abstract?: \nA. class Classname.abstract:  \nB. class Classname(abstract): \nC. class Classname(ABC):': "C",
+    'How to get all object-specific attributes?: \nA. name.attribute \nB. object._class__attribute \nC. object.__dict__ \nD. object.__doc__ ': "C",
+    'How to get/set NON-PRIVATE object attribute?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "A",
+    'How to get/set PRIVATE object attribute?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "B",
+    'How to get the class/method documentation?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "D",
 }
 
 
@@ -144,8 +151,10 @@ def selecting_quiz():
             return http_quiz
         elif selected_dictionary == "pytest":
             return pytest
+        elif selected_dictionary == "oop":
+            return oop
         else:
-            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, pytest (basics of pytest): ").lower()
+            selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, OOP: ").lower()
 
 
 def shuffle_questions():                                                             # Shuffle the questions order
