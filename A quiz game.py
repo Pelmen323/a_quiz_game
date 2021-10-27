@@ -135,6 +135,20 @@ oop = {
     'How to get/set NON-PRIVATE object attribute?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "A",
     'How to get/set PRIVATE object attribute?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "B",
     'How to get the class/method documentation?: \nA. name.attribute \nB. object._class__attribute \nC. name.__dict__ \nD. name.__doc__ ': "D",
+    'Correct example of decorator?: \nA. object = property()  \nB. self.object = decorator_name \nC. @decorator_name': "C",
+    'What decorator takes and returns?: \nA. value, value  \nB. function, function \nC. nothing': "B",
+    'Main purpose of property?: \nA. To call custom methods (getter/setter/deleter) behind the scenes while user calls attributes of the object \nB. To take a function, perform actions around it and return the function with its result, like an external layer of the function \nC. To access private methods and attributes of the object': "A",
+    'What takes the method @classmethod?: \nA. object of a class  \nB. function \nC. class \nD. nothing': "C",
+    'What takes the method @staticmethod?: \nA. object of a class  \nB. function \nC. class \nD. nothing': "D",
+    'What methods are called "magic" or "dunder"?: \nA. @method  \nB. __method__ \nC. any class method \nD. only getters, setters, deleters and init': "B",
+    'What method should be defined to change the result of "print(object)"?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "A",
+    'What method should be defined to make "len(object)" possible to call?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "B",
+    'What methods should be defined perform comparisons between objects?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "C",
+    # How to perform comparisons with objects
+    # Connection between __eq__ and __hash__
+    # __bool__
+    # Calling the object() __call__
+    # Polymorphism concept
 }
 
 
