@@ -143,12 +143,11 @@ oop = {
     'What methods are called "magic" or "dunder"?: \nA. @method  \nB. __method__ \nC. any class method \nD. only getters, setters, deleters and init': "B",
     'What method should be defined to change the result of "print(object)"?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "A",
     'What method should be defined to make "len(object)" possible to call?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "B",
-    'What methods should be defined perform comparisons between objects?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "C",
-    # How to perform comparisons with objects
-    # Connection between __eq__ and __hash__
-    # __bool__
-    # Calling the object() __call__
-    # Polymorphism concept
+    'What methods should be defined to perform comparisons between objects?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "C",
+    'Why it is important to re-define __hash__ method when changing the __eq__ method?: \nA. Because hash method is annulled when changing the __eq__ one. Hash is used if object is a dict key  \nB. No need - hash is annulled when changing __eq__ but it doesnt affect common operations \nC. No need - hash doesnt depend on __eq__': "A",
+    'What method should be defined to perform custom checks if the object is true or false with bool() func (default is always True)"?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "D",
+    'Is it possible to call object as a function ( object() )?: \nA. No  \nB. Yes, by default \nC. Yes, if __call__ is defined': "C",
+    'Difference between polymorphism and duck typing?: \nA. Same  \nB. Polymorphism is related to the ability of child classes override the parents methods, while duck typing is about objects of different classes having the same methods and attributes': "B",
 }
 
 
