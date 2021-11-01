@@ -143,11 +143,14 @@ oop = {
     'What methods are called "magic" or "dunder"?: \nA. @method  \nB. __method__ \nC. any class method \nD. only getters, setters, deleters and init': "B",
     'What method should be defined to change the result of "print(object)"?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "A",
     'What method should be defined to make "len(object)" possible to call?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "B",
-    'What methods should be defined to perform comparisons between objects?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "C",
+    'What methods should be defined to perform comparisons between objects?: \nA. __iter__/__next__  \nB. __getitem__, __setitem__, __delitem__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "C",
     'Why it is important to re-define __hash__ method when changing the __eq__ method?: \nA. Because hash method is annulled when changing the __eq__ one. Hash is used if object is a dict key  \nB. No need - hash is annulled when changing __eq__ but it doesnt affect common operations \nC. No need - hash doesnt depend on __eq__': "A",
     'What method should be defined to perform custom checks if the object is true or false with bool() func (default is always True)"?: \nA. __str__/__repr__  \nB. __len__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "D",
     'Is it possible to call object as a function ( object() )?: \nA. No  \nB. Yes, by default \nC. Yes, if __call__ is defined': "C",
     'Difference between polymorphism and duck typing?: \nA. Same  \nB. Polymorphism is related to the ability of child classes override the parents methods, while duck typing is about objects of different classes having the same methods and attributes': "B",
+    'What methods should be defined to use [index] or ["key"] with objects?: \nA. __str__/__repr__  \nB.__getitem__, __setitem__, __delitem__\nC. __eq__/__gt__/__ge__ \nD. __bool__': "B",
+    'How to make objects iterable?: \nA. __iter__/__next__ \nB. __getitem__, __setitem__, __delitem__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "A",
+    'How to reuse parent method in child class method?: \nA. Jest replace the whole method  \nB. Create a new separate method \nC. Use super() to call parent class method during child class method (super().__init__()) ': "C",
 }
 
 
@@ -170,7 +173,7 @@ def selecting_quiz():
             selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, OOP: ").lower()
 
 
-def shuffle_questions():                                                             # Shuffle the questions order
+def shuffle_questions():                       F                                      # Shuffle the questions order
     questions = selecting_quiz()
     list_q = list(questions.items())                                                 # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
     random.shuffle(list_q)                                                           # Shuffle the order of the list items
