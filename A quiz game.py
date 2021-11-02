@@ -150,7 +150,12 @@ oop = {
     'Difference between polymorphism and duck typing?: \nA. Same  \nB. Polymorphism is related to the ability of child classes override the parents methods, while duck typing is about objects of different classes having the same methods and attributes': "B",
     'What methods should be defined to use [index] or ["key"] with objects?: \nA. __str__/__repr__  \nB.__getitem__, __setitem__, __delitem__\nC. __eq__/__gt__/__ge__ \nD. __bool__': "B",
     'How to make objects iterable?: \nA. __iter__/__next__ \nB. __getitem__, __setitem__, __delitem__ \nC. __eq__/__gt__/__ge__ \nD. __bool__': "A",
-    'How to reuse parent method in child class method?: \nA. Jest replace the whole method  \nB. Create a new separate method \nC. Use super() to call parent class method during child class method (super().__init__()) ': "C",
+    'How to reuse parent method in child class method?: \nA. Just replace the whole method  \nB. Create a new separate method \nC. Use super() to call parent class method during child class method (super().__init__()) ': "C",
+    'Alternative to super().__init__(arg)?: \nA. super.__init__(self, arg) \nB. object(arg).__init__ \nC. Class.__init__(self, arg)': "C",
+    'Classes Tiger and Lion have the same method "purr". Class Cat is created via "class Cat(Lion, Tiger). Method of which class will be used if super().purr is used in class Cat?: \nA. Tiger \nB. Lion \nC. Object': "B",
+    'What does __slots__ do?: \nA. Limits available attributes by defining them in an iterable \nB. Limits available methods by defining them in an iterable\nC. Limits available properties by defining them in an iterable': "A",
+    'Do child classes use __slots__ if it is defined in parent class but not defined in child class?: \nA. Yes \nB. No ': "B",
+    'Can child classes use __slots__ if it is not defined in parent class?: \nA. Yes \nB. No ': "B",
 }
 
 
@@ -173,7 +178,7 @@ def selecting_quiz():
             selected_dictionary = input("Please, input the name of the test you want to take. Currently available: Python1 (basic level), Python2 (indexing, lambda, OOP), Python3 (random, OS), HTTP, OOP: ").lower()
 
 
-def shuffle_questions():                       F                                      # Shuffle the questions order
+def shuffle_questions():                                                             # Shuffle the questions order
     questions = selecting_quiz()
     list_q = list(questions.items())                                                 # Convert dictionary into a list of tuples [(key, value), (key, value) etc]
     random.shuffle(list_q)                                                           # Shuffle the order of the list items
